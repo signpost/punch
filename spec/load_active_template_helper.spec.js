@@ -31,7 +31,7 @@ describe("loadActiveTemplateFromIndex", function() {
             expect(encoding).toBe('utf8');
 
             return expected.return;
-		});
+        });
 
         var callback = jasmine.createSpy();
 
