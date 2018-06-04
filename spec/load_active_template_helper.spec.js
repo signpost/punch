@@ -4,7 +4,7 @@ var fs = require('fs');
 
 describe("loadActiveTemplateFromIndex", function() {
     var sample_config = {
-		activeTemplatePath: '/spec/path/to/templates/',
+        activeTemplatePath: '/spec/path/to/templates/',
         templateTagName: 'tagName'
     };
 
@@ -27,7 +27,7 @@ describe("loadActiveTemplateFromIndex", function() {
 
         spyOn(fs, "readFileSync").andCallFake(function(pathToIndex, encoding) {
             var expected = expectedFileSyncs.shift();
-			expect(pathToIndex).toBe(expected.path);
+            expect(pathToIndex).toBe(expected.path);
             expect(encoding).toBe('utf8');
 
             return expected.return;
