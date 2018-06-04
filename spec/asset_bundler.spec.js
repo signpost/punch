@@ -32,6 +32,11 @@ describe("setup", function(){
 		}
 	};
 
+    afterEach(function () {
+        AssetBundler.bundles = {};
+        AssetBundler.bundleOptions = {};
+    });
+
 	it("setup the templates handler", function() {
 		spyOn(ModuleUtils, "requireAndSetup").andCallFake(function(id, config) {
 			return {"id": id};
