@@ -24,12 +24,12 @@ module.exports = {
     },
 
     loadActiveTemplateFromIndex: function() {
-		if(!this.activeTemplatePath) {
-			return "";
-		}
+        if(!this.activeTemplatePath) {
+            return '';
+        }
 
         try {
-			var allTemplates = JSON.parse(fs.readFileSync(__dirname + this.activeTemplatePath  + 'index.json', 'utf8'));
+            var allTemplates = JSON.parse(fs.readFileSync(__dirname + this.activeTemplatePath  + 'index.json', 'utf8'));
             var activeTemplate = allTemplates.find(template => template.isActive);
 
             if (!activeTemplate || !activeTemplate.fullMarkupFile) {
